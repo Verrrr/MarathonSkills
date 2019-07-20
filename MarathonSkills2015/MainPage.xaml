@@ -21,7 +21,7 @@
         </Frame>
         <Border Grid.Row="2"  Background="#00903e" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Opacity="0.81">
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBlock Name="TimerLog" Text="18 days 8 hours and 17 mintues until the race starts!" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
+                <TextBlock Name="TimerLog" Text="timer" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
             </StackPanel>
         </Border>
         <Frame Grid.Row="1" x:Name="MainFrame">

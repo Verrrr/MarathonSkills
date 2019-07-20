@@ -33,8 +33,18 @@ namespace MarathonSkills2015
 
         public void InitializeTimer()
         {
+            UpdateTimer(null, null);
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0,0,1);
+            timer.Tick += UpdateTimer;
+            timer.Start();
+        }
+
+        public void UpdateTimer(object sender, object e)
+        {
             DateTime Now = DateTime.Now;
             TimeSpan DatesRemaining = TimeSpan.FromMinutes((int)(MDate - Now).TotalMinutes);
+
             if (DatesRemaining.TotalSeconds < 0)
             {
                 MDate.AddYears(1);
@@ -42,12 +52,12 @@ namespace MarathonSkills2015
             String TimeRemaining = "";
             if (DatesRemaining.TotalDays > 0)
             {
-                String day = DatesRemaining.TotalDays + " day";
+                String day = Math.Floor(DatesRemaining.TotalDays) + " day";
                 if (DatesRemaining.TotalDays > 1)
                 {
                     day += "s";
                 }
-                TimeRemaining += day;
+                TimeRemaining += day+" ";
             }
             if (DatesRemaining.Hours > 0)
             {
@@ -56,21 +66,23 @@ namespace MarathonSkills2015
                 {
                     Hour += "s";
                 }
-                TimeRemaining += Hour;
+                TimeRemaining += Hour +" ";
             }
+
+            TimeRemaining += TimeRemaining.Length != 0 ? " and " : "";
+
             if (DatesRemaining.Minutes > 0)
             {
-                String Minute = DatesRemaining.Minutes + " minutes ";
+                String Minute = DatesRemaining.Minutes + " minute";
                 if (DatesRemaining.Minutes > 1)
                 {
                     Minute += "s";
                 }
-                TimeRemaining += Minute;
+                TimeRemaining += Minute+" ";
             }
             TimeRemaining += "until the race starts!";
-
+            TimerLog.Text = TimeRemaining;
         }
-
         public void InitiliazeMarathonDate()
         {
             DateTime Now = DateTime.Now;
