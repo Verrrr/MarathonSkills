@@ -16,19 +16,22 @@
                 <TextBlock TextWrapping="Wrap" FontSize="36" FontFamily="Open Sans Semibold" HorizontalAlignment="Center" Text="Saturday September 5 2015" FontStyle="Italic" Foreground="White" Name="MarathonDate"/>
             </StackPanel>
         </Frame>
-        <Frame x:Name="Main" Grid.Row="1" BorderThickness="2,0,0,0" FocusVisualPrimaryBrush="{x:Null}" Visibility="Visible" FocusVisualSecondaryBrush="#99000000">
+        <Frame x:Name="LoginFrame" Grid.Row="1" BorderThickness="2,0,0,0" FocusVisualPrimaryBrush="{x:Null}" Visibility="Visible" FocusVisualSecondaryBrush="#99000000">
             <Button Content="Login" Padding="30,0" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="20" Margin="0,0,20,20"/>
         </Frame>
         <Border Grid.Row="2"  Background="#00903e" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Opacity="0.81">
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBlock Text="18 days 8 hours and 17 mintues until the race starts!" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
+                <TextBlock Name="TimerLog" Text="18 days 8 hours and 17 mintues until the race starts!" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
             </StackPanel>
         </Border>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Content="I want to be a runner" FontSize="20" Padding="200, 10" Margin="0,20" HorizontalAlignment="Stretch"/>
-            <Button Content="I want to sponsor a runner" FontSize="20" Padding="200, 10" Margin="0,20" HorizontalAlignment="Stretch"/>
-            <Button Content="I want to find out more" FontSize="20" Padding="200, 10" Margin="0,20" HorizontalAlignment="Stretch"/>
-        </StackPanel>
+        <Frame Grid.Row="1" x:Name="MainFrame">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Content="I want to be a runner" FontSize="20" Padding="200, 10" Margin="0,20" HorizontalAlignment="Stretch"/>
+                <Button Content="I want to sponsor a runner" FontSize="20" Padding="200, 10" Margin="0,20" HorizontalAlignment="Stretch"/>
+                <Button Content="I want to find out more" FontSize="20" Padding="200, 10" Margin="0,20" HorizontalAlignment="Stretch"/>
+            </StackPanel>
+        </Frame>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="250"/>
             <RowDefinition Height="*"/>
