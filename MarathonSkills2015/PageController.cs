@@ -14,5 +14,11 @@ namespace MarathonSkills2015
             set { main = value; }
             get { return main; }
         }
+
+        public static void ChangePageTitle(String title)
+        {
+            var appView = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView();
+            appView.Title = title;
+        }
     }
 }

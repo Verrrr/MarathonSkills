@@ -28,6 +28,7 @@ namespace MarathonSkills2015
             this.InitializeComponent();
             PageController.Main.NavRowDefinition.Height = new GridLength(250);
             PageController.Main.NavigationFrame.Navigate(typeof(TitleHeader));
+            PageController.ChangePageTitle("");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

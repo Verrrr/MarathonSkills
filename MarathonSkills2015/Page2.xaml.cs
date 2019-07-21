@@ -25,6 +25,12 @@ namespace MarathonSkills2015
         public Page2()
         {
             this.InitializeComponent();
+            PageController.ChangePageTitle("Register as a runner");
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
