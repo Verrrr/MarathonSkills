@@ -8,18 +8,111 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Margin="30, 30">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="4*"></RowDefinition>
         </Grid.RowDefinitions>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock HorizontalAlignment="Center" Text="Sponsor a runner" FontSize="30" Padding="20"></TextBlock>
             <TextBlock FontSize="18">
                 <Run>Please choose the runner you would like to sponsor and the amount you would like </Run>
                 <LineBreak></LineBreak>
                 <Run>to sponsor them for. Thank you for your support of the runners and their charities!</Run>
             </TextBlock>
-        </StackPanel> 
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <StackPanel Grid.Column="0" Margin="30">
+                <TextBlock Padding="20" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Run>Sponsorship details</Run>
+                </TextBlock>
+                <Grid Margin="10, 30, 10, 0">
+                    <TextBlock Grid.Row="0" Grid.Column="0" Padding="10" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Run>Your Name:</Run>
+                    </TextBlock>
+                    <TextBox VerticalAlignment="Center" Grid.Row="0" Grid.Column="1"></TextBox>
+
+                    <TextBlock Grid.Row="1" Grid.Column="0" Padding="10" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Run>Runner:</Run>
+                    </TextBlock>
+                    <TextBox VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"></TextBox>
+
+                    <TextBlock Grid.Row="2" Grid.Column="0" Padding="10" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Run>Name on Card:</Run>
+                    </TextBlock>
+                    <TextBox VerticalAlignment="Center" Grid.Row="2" Grid.Column="1"></TextBox>
+
+                    <TextBlock Grid.Row="3" Grid.Column="0" Padding="10" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Run>Credit Card #:</Run>
+                    </TextBlock>
+                    <TextBox VerticalAlignment="Center" Grid.Row="3" Grid.Column="1"></TextBox>
+
+                    <TextBlock Grid.Row="4" Grid.Column="0" Padding="10" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Run>Expiry Date:</Run>
+                    </TextBlock>
+                    <TextBox VerticalAlignment="Center" Grid.Row="4" Grid.Column="1"></TextBox>
+
+                    <TextBlock Grid.Row="5" Grid.Column="0" Padding="10" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Run>CVC:</Run>
+                    </TextBlock>
+                    <TextBox VerticalAlignment="Center" Grid.Row="5" Grid.Column="1"></TextBox>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </StackPanel>
+            <Grid Grid.Column="1">
+                <StackPanel  Margin="30">
+                    
+                    <TextBlock Padding="20" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Run>Charity</Run>
+                    </TextBlock>
+
+                    <Grid>
+                        <TextBlock Grid.Column="0" Padding="20" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Run>Save The Cats Fund</Run>
+                        </TextBlock>
+
+                        <Button Background="Transparent"  Margin="0,0,30,0" Content="&#x02139;" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="Yellow" >
+                           
+                        </Button>
+                    </Grid>
+
+                    <StackPanel>
+                        <TextBlock Padding="10" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Run>Amount to Donate</Run>
+                        </TextBlock>
+                        <TextBlock  FontSize="80" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Run>$50</Run>
+                        </TextBlock>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button FontSize="20" Margin="5,0" FontWeight="Bold">-</Button>
+                            <TextBox Width="150" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"></TextBox>
+                            <Button FontSize="20" Margin="5,0" FontWeight="Bold">+</Button>
+                        </StackPanel>
+                        <StackPanel Margin="0, 50" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button Margin="10, 0" FontSize="20">Pay now</Button>
+                            <Button Margin="10, 0" FontSize="20">Cancel</Button>
+                        </StackPanel>
+                    </StackPanel>
+                    
+                    
+                </StackPanel>
+            </Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        </Grid>
     </Grid>
 </Page>
