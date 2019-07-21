@@ -27,8 +27,12 @@ namespace MarathonSkills2015
         public MainPage()
         {
             this.InitializeComponent();
-            this.InitiliazeMarathonDate();
             this.InitializeTimer();
+            PageController.Main = this;
+            if(MainFrame.Content == null)
+            {
+                MainFrame.Navigate(typeof(Page1));
+            }
         }
 
         public void InitializeTimer()
@@ -39,7 +43,6 @@ namespace MarathonSkills2015
             timer.Tick += UpdateTimer;
             timer.Start();
         }
-
         public void UpdateTimer(object sender, object e)
         {
             DateTime Now = DateTime.Now;
@@ -83,16 +86,6 @@ namespace MarathonSkills2015
             TimeRemaining += "until the race starts!";
             TimerLog.Text = TimeRemaining;
         }
-        public void InitiliazeMarathonDate()
-        {
-            DateTime Now = DateTime.Now;
-            TimeSpan DatesRemaining = TimeSpan.FromMinutes((int)(MDate - Now).TotalMinutes);
-            if (DatesRemaining.TotalSeconds < 0)
-            {
-                MDate.AddYears(1);
-            }
-            MarathonDate.Text = MDate.ToLongDateString();
-            
-        }
+        
     }
 }
