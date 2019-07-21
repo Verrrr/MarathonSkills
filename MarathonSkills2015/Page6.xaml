@@ -35,8 +35,7 @@
                     <TextBlock Grid.Row="1" Grid.Column="0" Padding="10" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center">
                     <Run>Runner:</Run>
                     </TextBlock>
-                    <TextBox VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"></TextBox>
-
+                    <ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
                     <TextBlock Grid.Row="2" Grid.Column="0" Padding="10" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center">
                     <Run>Name on Card:</Run>
                     </TextBlock>
@@ -56,7 +55,7 @@
                     </TextBlock>
                     <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1">
 
-                        <TextBox VerticalAlignment="Center" Margin="0,0,20,0"></TextBox>
+                        <TextBox VerticalAlignment="Center" Margin="0,0,10,0"></TextBox>
                         <TextBox VerticalAlignment="Center" Width="90" ></TextBox>
                     </StackPanel>
 
