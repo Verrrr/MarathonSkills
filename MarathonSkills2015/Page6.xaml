@@ -50,12 +50,20 @@
                     <TextBlock Grid.Row="4" Grid.Column="0" Padding="10" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center">
                     <Run>Expiry Date:</Run>
                     </TextBlock>
-                    <TextBox VerticalAlignment="Center" Grid.Row="4" Grid.Column="1"></TextBox>
 
                     <TextBlock Grid.Row="5" Grid.Column="0" Padding="10" FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Center">
                     <Run>CVC:</Run>
                     </TextBlock>
-                    <TextBox VerticalAlignment="Center" Grid.Row="5" Grid.Column="1"></TextBox>
+                    <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1">
+
+                        <TextBox VerticalAlignment="Center" Margin="0,0,20,0"></TextBox>
+                        <TextBox VerticalAlignment="Center" Width="90" ></TextBox>
+                    </StackPanel>
+
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1">
+                        <TextBox Width="100" VerticalAlignment="Center" ></TextBox>
+                    </StackPanel>
+
 
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
