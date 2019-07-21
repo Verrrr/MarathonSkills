@@ -27,5 +27,13 @@ namespace MarathonSkills2015
             this.InitializeComponent();
             PageController.Main.NavRowDefinition.Height = new GridLength(48);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (PageController.Main.MainFrame.CanGoBack)
+            {
+                PageController.Main.MainFrame.GoBack();
+            }
+        }
     }
 }

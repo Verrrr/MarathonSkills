@@ -14,7 +14,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel  Grid.Row="0" VerticalAlignment="Center" Orientation="Horizontal">
-            <Button Style="{StaticResource NavigationBackButtonNormalStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Style="{StaticResource NavigationBackButtonNormalStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"/>
             <TextBlock Text="MARATHON SKILLS 2015" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="18"></TextBlock>
         </StackPanel>
     </Grid>
