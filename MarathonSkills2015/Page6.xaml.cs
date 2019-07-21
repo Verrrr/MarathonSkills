@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using System.Diagnostics;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -21,26 +20,12 @@ namespace MarathonSkills2015
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Page1 : Page
+    public sealed partial class Page6 : Page
     {
-        public Page1()
+        public Page6()
         {
             this.InitializeComponent();
-            PageController.Main.NavRowDefinition.Height = new GridLength(250);
-            PageController.Main.NavigationFrame.Navigate(typeof(TitleHeader));
-            PageController.ChangePageTitle("");
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Page2));
-            PageController.Main.NavigationFrame.Navigate(typeof(NavigationBar));
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Page6));
-            PageController.Main.NavigationFrame.Navigate(typeof(NavigationBar));
+            PageController.ChangePageTitle("Sponsor a runner");
         }
     }
 }

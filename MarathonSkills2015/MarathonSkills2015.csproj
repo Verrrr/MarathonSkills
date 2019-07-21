@@ -131,6 +131,9 @@
     <Compile Include="Page2.xaml.cs">
       <DependentUpon>Page2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page6.xaml.cs">
+      <DependentUpon>Page6.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TitleHeader.xaml.cs">
@@ -170,6 +173,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

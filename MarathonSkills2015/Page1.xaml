@@ -12,7 +12,7 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Center">
             <Button Content="I want to be a runner" FontSize="20" Padding="200, 10" Margin="0,20" HorizontalAlignment="Stretch" Click="Button_Click"/>
-            <Button Content="I want to sponsor a runner" FontSize="20" Padding="200, 10" Margin="0,20" HorizontalAlignment="Stretch"/>
+            <Button Content="I want to sponsor a runner" FontSize="20" Padding="200, 10" Margin="0,20" HorizontalAlignment="Stretch" Click="Button_Click_1"/>
             <Button Content="I want to find out more" FontSize="20" Padding="200, 10" Margin="0,20" HorizontalAlignment="Stretch"/>
         </StackPanel>
         <Frame x:Name="LoginFrame" x:FieldModifier="public" Grid.Row="0" BorderThickness="2,0,0,0" Visibility="Visible">
