@@ -193,6 +193,9 @@
     <PackageReference Include="MySql.Data">
       <Version>8.0.16</Version>
     </PackageReference>
+    <PackageReference Include="System.Data.DataSetExtensions">
+      <Version>4.5.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Fonts\Frutiger.ttf" />
